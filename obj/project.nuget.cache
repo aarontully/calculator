@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bp3vu9SLAe/IOzS2sYZbOojOJ4Qi+fLhzNdKCrVW/79N3rL4A/h28bvH2xKhl4gxnk4jpoM4EthVegen+ZBgwA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tullya\\OneDrive\\WPF Masterclass\\Calculator\\Calculator\\Calculator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tullya\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
