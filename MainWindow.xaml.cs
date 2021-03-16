@@ -51,40 +51,15 @@ namespace Calculator {
             lblResult.Content = "0";
         }
 
+        private void btnOperation_Click(object sender, RoutedEventArgs e) {
+            if (double.TryParse(lblResult.Content.ToString(), out lastNumber)) {
+                lblResult.Content = "0";
+            }
+        }
+
         private void btnNumber_Click(object sender, RoutedEventArgs e) {
 
-            int selectedValue = 0;
-
-            if(sender == btnZero) {
-                selectedValue = 0;
-            }
-            else if (sender == btnOne) {
-                selectedValue = 1;
-            }
-            else if (sender == btnTwo) {
-                selectedValue = 2;
-            }
-            else if (sender == btnThree) {
-                selectedValue = 3;
-            }
-            else if (sender == btnFour) {
-                selectedValue = 4;
-            }
-            else if (sender == btnFive) {
-                selectedValue = 5;
-            }
-            else if (sender == btnSix) {
-                selectedValue = 6;
-            }
-            else if (sender == btnSeven) {
-                selectedValue = 7;
-            }
-            else if (sender == btnEight) {
-                selectedValue = 8;
-            }
-            else if (sender == btnNine) {
-                selectedValue = 9;
-            }
+            int selectedValue = int.Parse((sender as Button).Content.ToString());
 
             if (lblResult.Content.ToString() == "0") {
                 lblResult.Content = $"{selectedValue}";

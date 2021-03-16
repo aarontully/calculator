@@ -41,7 +41,8 @@
                 Grid.Row="1"
                 Grid.Column="2"
                 Margin="5"/>
-        <Button x:Name="btnDivide" 
+        <Button x:Name="btnDivide"
+                Click="btnOperation_Click"
                 Content="/" 
                 Grid.Row="1"
                 Grid.Column="3"
@@ -64,6 +65,7 @@
                 Grid.Column="2"
                 Margin="5"/>
         <Button x:Name="btnTimes"
+                Click="btnOperation_Click"
                 Content="*" 
                 Grid.Row="2"
                 Grid.Column="3"
@@ -86,6 +88,7 @@
                 Grid.Column="2"
                 Margin="5"/>
         <Button x:Name="btnMinus"
+                Click="btnOperation_Click"
                 Content="-"
                 Grid.Row="3"
                 Grid.Column="3"
@@ -107,7 +110,8 @@
                 Grid.Row="4"
                 Grid.Column="2"
                 Margin="5"/>
-        <Button x:Name="btnPlus" 
+        <Button x:Name="btnPlus"
+                Click="btnOperation_Click"
                 Content="+" 
                 Grid.Row="4"
                 Grid.Column="3"
