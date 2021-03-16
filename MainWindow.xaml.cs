@@ -19,6 +19,7 @@ namespace Calculator {
 
         double lastNumber;
         double result;
+        SelectedOperator selectedOperator;
 
         public MainWindow() {
             InitializeComponent();
@@ -31,6 +32,26 @@ namespace Calculator {
 
         private void BtnEquals_Click(object sender, RoutedEventArgs e) {
             
+            double newNumber;
+
+            if (double.TryParse(lblResult.Content.ToString(), out newNumber)) {
+                switch (selectedOperator) {
+                    case SelectedOperator.Addition:
+                        result = SimpleMath.Add(lastNumber, newNumber);
+                        break;
+                    case SelectedOperator.Subtraction:
+                        result = SimpleMath.Minus(lastNumber, newNumber);
+                        break;
+                    case SelectedOperator.Multiplication:
+                        result = SimpleMath.Times(lastNumber, newNumber);
+                        break;
+                    case SelectedOperator.Division:
+                        result = SimpleMath.Divide(lastNumber, newNumber);
+                        break;
+                }
+            }
+
+            lblResult.Content = result.ToString();
         }
 
         private void BtnPercent_Click(object sender, RoutedEventArgs e) {
@@ -55,6 +76,19 @@ namespace Calculator {
             if (double.TryParse(lblResult.Content.ToString(), out lastNumber)) {
                 lblResult.Content = "0";
             }
+
+            if(sender == btnTimes) {
+                selectedOperator = SelectedOperator.Multiplication;
+            }
+            else if (sender == btnDivide) {
+                selectedOperator = SelectedOperator.Division;
+            }
+            else if (sender == btnPlus) {
+                selectedOperator = SelectedOperator.Addition;
+            }
+            else if (sender == btnMinus) {
+                selectedOperator = SelectedOperator.Subtraction;
+            }
         }
 
         private void btnNumber_Click(object sender, RoutedEventArgs e) {
@@ -67,6 +101,31 @@ namespace Calculator {
             else {
                 lblResult.Content = $"{lblResult.Content}{selectedValue}";
             }
+        }
+    }
+
+    public enum SelectedOperator {
+        Addition,
+        Subtraction,
+        Multiplication,
+        Division
+    }
+
+    public class SimpleMath {
+        public static double Add(double n1, double n2) {
+            return n1 + n2;
+        }
+
+        public static double Minus(double n1, double n2) {
+            return n1 - n2;
+        }
+
+        public static double Times(double n1, double n2) {
+            return n1 * n2;
+        }
+
+        public static double Divide(double n1, double n2) {
+            return n1 / n2;
         }
     }
 }
