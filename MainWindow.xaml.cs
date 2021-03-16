@@ -102,6 +102,16 @@ namespace Calculator {
                 lblResult.Content = $"{lblResult.Content}{selectedValue}";
             }
         }
+
+        private void btnDot_Click(object sender, RoutedEventArgs e) {
+
+            if (lblResult.Content.ToString().Contains(".")) {
+                //do nothing
+            }
+            else {
+                lblResult.Content = $"{lblResult.Content}.";
+            }
+        }
     }
 
     public enum SelectedOperator {

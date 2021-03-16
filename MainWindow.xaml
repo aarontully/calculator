@@ -122,7 +122,8 @@
                 Grid.Row="5"
                 Grid.ColumnSpan="2"
                 Margin="5"/>
-        <Button x:Name="btnDot" 
+        <Button x:Name="btnDot"
+                Click="btnDot_Click"
                 Content="." 
                 Grid.Row="5"
                 Grid.Column="2"
