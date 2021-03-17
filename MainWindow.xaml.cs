@@ -55,13 +55,21 @@ namespace Calculator {
         }
 
         private void BtnPercent_Click(object sender, RoutedEventArgs e) {
-            if (double.TryParse(lblResult.Content.ToString(), out lastNumber)) {
-                lastNumber = lastNumber / 100;
-                lblResult.Content = lastNumber.ToString();
+
+            double tempNumber;
+            if (double.TryParse(lblResult.Content.ToString(), out tempNumber)) {
+
+                tempNumber = (tempNumber / 100);
+                if(lastNumber != 0) {
+                    tempNumber *= lastNumber;
+                }
+
+                lblResult.Content = tempNumber.ToString();
             }
         }
 
         private void BtnNegative_Click(object sender, RoutedEventArgs e) {
+            
             if(double.TryParse(lblResult.Content.ToString(), out lastNumber)) {
                 lastNumber = lastNumber * -1;
                 lblResult.Content = lastNumber.ToString();
@@ -70,6 +78,8 @@ namespace Calculator {
 
         private void BtnAC_Click(object sender, RoutedEventArgs e) {
             lblResult.Content = "0";
+            result = 0;
+            lastNumber = 0;
         }
 
         private void btnOperation_Click(object sender, RoutedEventArgs e) {
