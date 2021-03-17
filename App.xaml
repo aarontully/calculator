@@ -25,7 +25,7 @@
             <Setter Property="Background" Value="{StaticResource operatorsColor}"/>
         </Style>
 
-        <Style TargetType="Window">
+        <Style TargetType="Grid">
             <Setter Property="Background" Value="Black"/>
         </Style>
 
