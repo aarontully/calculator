@@ -17,3 +17,4 @@ C:\Users\tullya\OneDrive\WPF Masterclass\Calculator\Calculator\obj\Debug\netcore
 C:\Users\tullya\OneDrive\WPF Masterclass\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.dll
 C:\Users\tullya\OneDrive\WPF Masterclass\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.pdb
 C:\Users\tullya\OneDrive\WPF Masterclass\Calculator\Calculator\obj\Debug\netcoreapp3.1\Calculator.genruntimeconfig.cache
+C:\Users\tullya\OneDrive\WPF Masterclass\Calculator\Calculator\obj\Debug\netcoreapp3.1\App.baml
